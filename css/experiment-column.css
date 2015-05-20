@@ -1,0 +1,160 @@
+/*
+CSS3 group navigation Experiment
+Date: 2015.02.16
+Author: Chenzhou
+*/
+.wrap_305_305_350 {
+  width: 70em;
+  margin: 0 auto;
+}
+
+.wrap_305_305_350 .aside {
+  float: left;
+  width: 21em;
+  padding-top: 1em;
+  padding-right: 1em;
+  overflow: hidden;
+}
+
+.wrap_305_305_350 .main {
+  float: left;
+  overflow: hidden;
+  width: 24em;
+  padding-top: 1em;
+}
+
+.column {
+  position: relative;
+  width: 21em;
+}
+
+.cln_head {
+  height: 34px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.cln_title {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+}
+
+.cln_title a {
+  color: #2789e2;
+  font-size: 22px;
+}
+
+.cln_links {
+  float: left;
+  padding-left: 10px;
+  padding-top: 4px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.cln_links a {
+  float: left;
+  color: #2789e2;
+  font-size: 14px;
+}
+
+.cln_links span {
+  background-position: -46px -97px;
+  height: 30px;
+  width: 8px;
+  font-size: 1px;
+  overflow: hidden;
+  float: left;
+}
+
+.cln_down {
+  float: right;
+  width: 48px;
+  height: 34px;
+  background-position: -91px -41px;
+}
+
+.cln_down:hover {
+  background-position: -169px -41px;
+}
+
+.cln_up {
+  background-position: -91px -74px;
+}
+
+.cln_up:hover {
+  background-position: -169px -74px;
+}
+
+.icon_new {
+  position: absolute;
+  top: -5px;
+  right: 14px;
+  width: 27px;
+  height: 15px;
+  background-position: 0 -113px;
+}
+
+.cln_main {
+  padding-top: 8px;
+  overflow: hidden;
+}
+
+.cln_list li {
+  background-position: -318px -274px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  padding-left: 10px;
+  width: 20em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.mt20 {
+  margin-top: 20px !important;
+}
+
+.mt18 {
+  margin-top: 18px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*main*/
+#secondScreen .ad_350_200 {
+  padding-bottom: 20px;
+  width: 24em;
+  height: 200px;
+  overflow: hidden;
+}
+
+.main .column {
+  width: 24em;
+}
+
+.main .cln_list li {
+  width: 23.5em;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.navpng, .cln_links span, .navgroup-right li, .cln_list li {
+  background-image: url(/app/images/sports_png8.png);
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=experiment-column.css.map */

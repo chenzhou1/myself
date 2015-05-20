@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+#carousel, #container{
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;   /*设置块级Flexbox容器*/
+
+  -ms-flex-direction: row;/*定义伸缩项目在主轴的排列方向*/
+  -ms-flex-wrap: wrap;
+  -ms-flex-pack:justify;
+  -ms-flex-align:flex-start;
+
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+  position: relative;
+  width: 70em;
+  height: auto;
+  margin: 1em auto;
+
+  /*background-color: black;*/
+  background-image: -webkit-gradient(radial, 50% 500, 1, 50% 500, 400,
+                        from(rgba(255, 255, 255, 0.3)),
+                        to(rgba(255, 255, 255, 0)));
+  background-repeat: no-repeat;
+
+}
+
+#container > div {
+    /*
+  flex: 1 33%;
+  -ms-flex: 1 33%;
+  */
+}
+
+/* ==========================================================================
+   Tools
+   ========================================================================== */

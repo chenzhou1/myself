@@ -1,0 +1,77 @@
+@charset "utf-8";
+/*
+CSS3 Accordion Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+
+.accordion {
+    /*background: #eee;*/
+    padding: 0.5em .4em;
+    max-width: 50em;
+    margin: 0 auto;
+    overflow: hidden;
+    order: 2;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.accordion > h3 {
+    padding: .4em 1em;
+    font-size: 1.1em;
+    font-style: bolder;
+    border-top: 2px solid #1f90df;
+    border-bottom: 1px solid #ccc; 
+}
+
+.accordion .section {
+    border-bottom: 1px solid #ccc;
+    padding: 0 .5em;
+}
+
+.accordion a {
+    display: block;
+    font-weight: normal;
+    padding: .5em 0;
+    text-decoration: none;
+}
+
+.accordion a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.accordion a + div {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.3s ease-in;
+    -ms-transition: height 0.3s ease-in;
+    transition: height 0.3s ease-in;
+}
+
+.accordion div img {
+    max-width: 100px;
+    padding: 0 .4em 0 0;
+    float: left;
+}
+
+.clear{ clear:both} 
+
+.accordion div span {    
+    padding: 0 1.2em 0 0;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.accordion a:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.accordion a:hover + div {
+    height: auto;
+    max-height: 150px;
+	overflow: auto;
+}

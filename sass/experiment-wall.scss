@@ -1,0 +1,185 @@
+@charset "utf-8";
+.amp {
+    font-family: Garamond,Baskerville,Georgia,serif !important;
+    font-style:italic;
+	font-weight:normal;
+	border: none;
+}
+	
+a.imgbox {
+    display: block;
+	text-decoration: none;
+	color: #333;
+	padding: 10px 10px 20px 10px;
+	width: 150px;
+	border: 1px solid #BFBFBF;
+	background-color: white;
+	z-index: 2;
+	font-size: 0.7em;
+	-webkit-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+	-moz-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+	box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+	-webkit-transition: all 0.5s ease-in;
+}
+	
+a.imgbox:hover,
+a.imgbox:focus,
+a.imgbox:active {
+    z-index: 999;
+	border-color: #6A6A6A;
+	-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+	-webkit-transform: rotate(0deg) scale(1.35) !important;
+	-moz-transform: rotate(0deg) scale(1.05) !important;
+	transform: rotate(0deg) scale(1.05) !important; 
+}
+.imgbox img {
+	margin: 0 0 15px;
+	width: 150px;
+	height: 150px;
+}
+	
+a img {
+	border: none;
+	display: block;
+}
+	
+.img-wall {
+	position: relative;
+	margin: 0 auto;
+	min-width: 25em;
+	max-width: 60em;
+	height: 450px;
+	margin-top: 2em;
+}
+.img-wall .imgbox {
+	position: absolute;
+}
+.img-wall h1 {
+	position: absolute;
+	z-index: 5;
+	top: 150px;
+	text-align: center;
+	width: 100%;
+	line-height: 1.9;
+	font-size: 1.8em;
+    font-weight: bold;
+}
+.img-wall h1 span {
+	background-color: white;
+	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+	padding: 0.4em 0.8em 0.3em 0.8em;
+	-webkit-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+	-moz-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+	box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+	border: 1px solid #6A6A6A;
+}
+	
+.img-wall .small {
+	width: 75px;
+	padding: 6px;
+	font-size: 0.6em;
+}
+.img-wall .small img {
+	width: 75px;
+	height: 75px;
+}
+.img-wall .medium {
+	width: 200px;
+	padding: 13px;
+	font-size: 0.8em;
+}
+.img-wall .medium img {
+	width: 200px;
+	height: 200px;
+}
+.img-wall .large {
+	width: 300px;
+	padding: 20px;
+	font-size: 1.1em;
+}
+.img-wall .large img {
+	width: 300px;
+	height: 300px;
+}
+a:hover,
+a:focus {
+	z-index: 5;
+}
+
+/*---轮播图----*/
+.type { margin:0 auto; width:700px; font-size:14px; line-height:21px; text-align:center;}
+.gallery { position:relative; margin:10px auto; width:650px; height:350px; overflow:hidden; border:5px solid #ddd;}
+.gallery ul { list-style: none; margin:0; padding:0;}
+.gallery img { display:block; width:100%;}
+
+/* 指示器 */
+.indicator { position:absolute; bottom:10px; left:0; width:100%; font-size:0; text-align:center;}
+.indicator i { margin:0 5px; display:inline-block; width:10px; height:10px; background:#fff; border-radius:50%; box-shadow:0 1px 1px rgba(0,0,0,.1);}
+.indicator i:first-child::before { margin:2px; display:block; width:6px; height:6px; background:#e33; content:''; border-radius:50%; -webkit-animation:indicate 12s ease 0 infinite; animation:indicate 12s ease 0 infinite;}
+@-webkit-keyframes indicate{
+	25% { -webkit-transform:translateX(0);}
+	30%, 50% { -webkit-transform:translateX(20px);}
+	55%, 75% { -webkit-transform:translateX(40px);}
+	80%, to { -webkit-transform:translateX(60px);}
+}
+@keyframes indicate{
+	25% { transform:translateX(0);}
+	30%, 50% { transform:translateX(20px);}
+	55%, 75% { transform:translateX(40px);}
+	80%, to { transform:translateX(60px);}
+}
+
+/* 淡入淡出 */
+.fade li { position:absolute; top:0; left:0; opacity: 0;}
+.fade li:nth-child(1) { -webkit-animation:fade 12s ease 0 infinite; animation:fade 12s ease 0 infinite;}
+.fade li:nth-child(2) { -webkit-animation:fade 12s ease 3s infinite; animation:fade 12s ease 3s infinite;}
+.fade li:nth-child(3) { -webkit-animation:fade 12s ease 6s infinite; animation:fade 12s ease 6s infinite;}
+.fade li:nth-child(4) { -webkit-animation:fade 12s ease 9s infinite; animation:fade 12s ease 9s infinite;}
+@-webkit-keyframes fade{
+	5% { opacity:0.75;}
+	20% { opacity: 1;}
+	25% { opacity:0.75;}
+	30% { opacity:0;}
+}
+@keyframes fade{
+    5% { opacity:0.75;}
+	20% { opacity: 1;}
+	25% { opacity:0.75;}
+	30% { opacity:0;}
+}
+
+/* 3D效果 */
+.three-D { height:100%; background:#eee;}
+.three-D li { position:absolute; top:0; bottom:0; left:0; right:0; margin: 0 auto; padding: 0; width:70%; height: 80%; overflow:hidden; opacity:0; box-shadow:0 2px 3px rgba(0,0,0,.1); -webkit-transform:translateX(250px) scale(.7); transform:translateX(250px) scale(.7);}
+.three-D li:nth-child(1) { -webkit-animation:three-Dm 12s ease 0 infinite; animation:three-Dm 12s ease 0 infinite;}
+.three-D li:nth-child(2) { -webkit-animation:three-D 12s ease 0 infinite; animation:three-D 12s ease 0 infinite;}
+.three-D li:nth-child(3) { -webkit-animation:three-D 12s ease 3s infinite; animation:three-D 12s ease 3s infinite;}
+.three-D li:nth-child(4) { -webkit-animation:three-D 12s ease 6s infinite; animation:three-D 12s ease 6s infinite;}
+@-webkit-keyframes 'three-D' {
+	5%, 25% { opacity:.7; z-index:1; -webkit-transform:translateX(250px) scale(.7);}
+	30%, 50% { opacity:1; z-index:2; -webkit-transform:translateX(0) scale(1);}
+	55%, 75% { opacity:.7; z-index:1; -webkit-transform:translateX(-250px) scale(.7);}
+	76% { opacity:0; -webkit-transform:translateX(250px) scale(.7);}
+}
+@keyframes 'three-D' {
+	5%, 25% { opacity:.7; z-index:1; transform:translateX(250px) scale(.7);}
+	30%, 50% { opacity:1; z-index:2; transform:translateX(0) scale(1);}
+	55%, 75% { opacity:.7; z-index:1; transform:translateX(-250px) scale(.7);}
+	76% { opacity:0; transform:translateX(250px) scale(.7);}
+}
+@-webkit-keyframes 'three-Dm' {
+	5%, 25% { opacity:1; z-index:2; -webkit-transform:translateX(0) scale(1);}
+	30%, 50% { opacity:.7; z-index:1; -webkit-transform:translateX(-250px) scale(.7);}
+	51% { opacity:0; -webkit-transform:translateX(-250px) scale(.7);}
+	75% { opacity:0; -webkit-transform:translateX(250px) scale(.7);}
+	from, 76%, to { opacity:.7; z-index:1;}
+}
+@keyframes 'three-Dm' {
+	5%, 25% { opacity:1; z-index:2; transform:translateX(0) scale(1);}
+	30%, 50% { opacity:.7; z-index:1; transform:translateX(-250px) scale(.7);}
+	51% { opacity:0; transform:translateX(-250px) scale(.7);}
+	75% { opacity:0; transform:translateX(250px) scale(.7);}
+	from, 76%, to { opacity:.7; z-index:1;}
+}

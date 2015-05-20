@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*
+CSS3 Tab Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+
+.table-wapper {
+  max-width: 52em;
+  position: relative;
+  margin: 0.5em auto;
+  order: 3;
+}
+
+.table-wapper > h3 {
+  padding: .5em;
+  font-style: bolder;
+  height: 1.2em;
+  line-height: 1.5em;
+  font-size: 1.1em;
+  color: #999;
+  border-top: 2px solid #1f90df;
+  border-bottom: 1px solid #ccc; 
+}
+
+.list-box {
+   position: absolute;
+   left: 0;
+   padding: 0 .4em;
+}
+
+.list-box .list-item {
+  border-bottom: 1px solid #DDD;
+  padding: 8px 0 4px 0;
+  overflow: hidden;
+}
+
+.list-box .list-item span {
+  padding-right: .5em;
+  overflow: hidden;
+}

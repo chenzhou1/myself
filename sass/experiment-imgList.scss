@@ -1,0 +1,126 @@
+@charset "utf-8";
+/*
+CSS3 Tab Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+
+.imgList-wapper {
+  margin: 0 auto 1em auto;
+  overflow: hidden;
+  /*
+  flex: 100% !important;
+  -ms-flex: 100%  !important;
+  */
+}
+
+.info-pop {
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+
+.info-pop .pop-content{
+  width: 335px;
+  padding: 1em;
+  margin-left: 0.5em;
+  background: #fff;
+  border: 1px solid #999;
+}
+
+.info-pop .meta{
+  overflow: hidden;
+  zoom: 1;
+}
+
+ .info-pop .meta .green {
+  color: #fff;
+  background: #66c056;
+}
+
+.info-pop .meta span {
+float: left;
+font-size: 13px;
+padding: 2px 10px 1px;
+background: #f5f5f5;
+margin: 0 8px 8px 0;
+border-radius: 12px;
+color: #666;
+word-break: keep-all;
+white-space: nowrap;
+}
+
+.imgList {
+  position: relative;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0 2em;
+}
+
+ol.imgList .item {
+  float: left;
+  width: 11em;
+  overflow: hidden;
+  margin-bottom: 12px;
+  padding: 1em .5em 0;
+  text-align: center;
+  color: rgb(32,40,48);
+  text-shadow: rgb(255,255,255) 0 1px 1px;
+}
+
+ol.imgList .item img {
+  width: 11em;
+  max-height: 12em;
+  overflow: hidden;
+}
+
+ol.imgList .item .fn {
+  font-size: 14px;
+  height: 1.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* csstransforms */
+.imgList .item a img { 
+  border-radius : 8px;
+  -webkit-border-radius : 8px;
+
+  box-shadow : 0 0 5px rgba(0,0,0,.5);
+  -webkit-box-shadow : 0 0 5px rgba(0,0,0,.5);
+}
+
+a.action {
+  display: block;
+  margin-bottom: 1.5em;
+  padding: .6em 1em;
+  background-color: rgb(254,100,35);
+  color: rgb(255,255,255);
+  text-align: center;
+  text-shadow : rgba(32,40,48,.8) 0 1px 1px;
+}
+
+ol.imgList .action {
+  font-size: 1.2em;
+  border-radius: 8px;
+  -moz-border-radius : 8px;
+  -webkit-border-radius : 8px;
+  text-shadow: rgba(32,40,48,.8) 0 1px 1px;
+}
+
+a.action:hover {
+  text-decoration : none;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  background-image : -webkit-gradient(linear, left top, left bottom, from(rgb(255,153,0)), to(rgb(229,90,32))); 
+  box-shadow : 0 0 10px rgba(0,0,0,.8);
+  -webkit-box-shadow : 0 0 10px rgba(0,0,0,.8);
+}
+
+a.basic{
+  background-color: rgb(229,195,85);
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(229,195,85)), to(rgb(187,160,71)));
+}

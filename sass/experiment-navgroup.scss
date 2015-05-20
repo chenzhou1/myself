@@ -1,0 +1,127 @@
+@charset "utf-8";
+/*
+CSS3 group navigation Experiment
+Date: 2015.02.16
+Author: Chenzhou
+*/
+
+.wrap {width: 70em; margin:0 auto; background-color:#fff;}
+
+.wrap-navgroup {height: 11em; overflow: hidden; position: relative; zoom: 1;}
+
+.wrap-navgroup .navgroup-left {position: absolute;left: 0px; top: 0px; height: 10em;overflow: hidden;z-index: 101;}
+.navgroup-left .container { width: 12.5em; height: 10em; position: relative;}
+.navgroup-left .container .aside { display: block; position: relative; z-index: 103;
+  background: url(/app/images/sportTV.jpg) no-repeat left center;
+  width: 12.5em; color: #fff;
+  height: 11em;}
+.container .aside .head {padding: 1.2em 0 0 0.7em; height: 24px;line-height: 24px; overflow: hidden; font-size: 18px; font-weight: normal;}
+
+.navgroup-left .container .main { position: absolute; left: 12.5em; top: 0px; z-index: 102;
+  background: url(/app/images/sportTV.jpg) no-repeat center;
+  width: 57em;
+  height: 11em;}
+.container .main .slider {width: 57em; overflow: hidden; height: 10em; zoom: 1; position: relative;}
+.container .main .controller { position: absolute; top: 1.2em; right: 1px; width: 49px; height: 22px;
+  background-position: -50px -284px; overflow: hidden; z-index: 300;}
+.controller .nav-left {float: left; width: 24px;height: 22px;overflow: hidden;background-position: -50px -284px; cursor: pointer;}
+.controller .nav-right {float: left; margin-left: 1px; display: inline; width: 24px; height: 22px;overflow: hidden;background-position: -75px -284px; cursor: pointer;}
+
+.container .main .group { width: 57em; overflow: hidden; zoom: 1; position: relative; padding: 42px 0 30px 0; 
+  height: 70px; z-index: 200;}
+.group .item {float: left; width: 11.5em;height: 70px;border-left: 1px solid #90afc8;position: relative;overflow: hidden;zoom: 1;}
+.item .item_a {display: block; color: #fff;font-size: 14px;padding-left: 1em; width: 10.5em;height: 70px;overflow: hidden;cursor: pointer;}
+@-webkit-keyframes slideRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(-160px);
+    transform: translateX(-160px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(-160px);
+    -ms-transform: translateX(-160px);
+    transform: translateX(-160px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+.main_slideRight{-webkit-animation: 0.5s slideRight ease-in-out; animation: 0.5s slideRight ease-in-out;}
+
+.wrap-navgroup .navgroup-right {top: 0.9em; height: 9em; overflow: hidden; padding-left: 12.5em; width: 57em; border-bottom: 1px solid #dbdbdd;
+  position: relative; z-index: 100;}
+.navgroup-right .header {height: 1.5em; overflow: hidden;border-bottom: 1px solid #dbdbdd;margin: 0 35px;padding-top: 2px; font-size:12px}
+.navgroup-right li {float: left; height: 1.5em;line-height: 1.5em;background-position: -319px -279px;padding: 0 33px 0 7px;}
+.navgroup-right .main {height: 7.5em; overflow: hidden;}
+.navgroup-right .slider {position: relative;height: 7.5em;overflow: hidden;width: 100%;}
+
+.navgroup-right .main-left {position: absolute;left: 1em;top: 50%;margin-top:-1em;width: 12px;height: 20px;background-position: 0 -46px;}
+.navgroup-right .main-right {position: absolute;right: 1em;top: 50%;margin-top: -1em;width: 12px;height: 20px;background-position: 0 -75px;}
+.navgroup-right .container {overflow: hidden; height: 7.5em; margin: 0 35px; position: relative;}
+
+.navgroup-right .item {float: left; width: 10em; display: inline;padding: 0 5px; height: 7em; 
+  overflow: hidden;
+  background-position: 168px -295px;
+  position: relative;
+}
+.item-hover {position: absolute;left: 0px; top: 3em; height: 4.5em; width: 100%;background: #edf2f8; display: none;}
+
+.item-hover .tag {height: 4em;overflow: hidden;}
+
+.tag a {margin: 0.5em 0 0 1em; overflow: hidden; height: 22px; line-height: 22px; text-align: center;color: #fff!important;background: #2789e2;
+  float: left; width: 5.5em; display: inline; font-size: 12px;}
+
+@-webkit-keyframes bounceInUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(119px);
+    transform: translateY(119px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(119px);
+    -ms-transform: translateY(119px);
+    transform: translateY(119px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.navgroup-right .item:hover .item-hover{ display: block;}
+.navgroup-right .item:hover .item-hover {-webkit-animation: 0.5s bounceInUp ease-in-out;animation:0.5s bounceInUp ease-in-out;}
+
+.clearfix {zoom: 1;}
+.clearfix:after {content: "\0020"; display: block; height: 0; clear: both;}
+
+
+.navpng, .fs_v_play, .videoNewsLeft, .cln_links span, .navgroup-right li, .mod_title, .mod_list li {
+  background-image: url(/app/images/sports_png8.png);
+  background-repeat: no-repeat;}

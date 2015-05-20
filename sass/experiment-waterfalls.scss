@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*
+CSS3 waterfalls Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+
+  .waterfalls {width: 70em; margin: 0 auto;} 
+  .waterfalls ul{width: 16.5em; margin: 0 5px; float: left; list-style: none;}
+  .waterfalls ul li{ width: 16em; padding: 10px; background: #ff9;}
+  .waterfalls ul li img{ width: 100%;} 
+  .waterfalls ul li p{text-align: center; line-height: 24px; font-size: 14px;}

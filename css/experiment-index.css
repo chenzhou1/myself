@@ -1,0 +1,749 @@
+/*
+CSS3 Tab Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+/* Container */
+@import url(reset.css);
+@import url(forms.css);
+@import url(tabs.css);
+@import url(scratch.css);
+.modal {
+  /* Overlay page content */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  /* Transition opacity on open */
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+  /* Hide for now */
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Show modal */
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  /* at time of writing (Feb 2012), pointer-events not supported by Opera or IE */
+}
+
+/* Content */
+.modal > div {
+  width: 500px;
+  background: #fff;
+  position: relative;
+  margin: 10% auto;
+  /* Default minimise animation */
+  -webkit-animation: minimise 500ms linear;
+  -moz-animation: minimise 500ms linear;
+  animation: minimise 500ms linear;
+  /* Prettify */
+  padding: 30px;
+  border-radius: 7px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #ccc);
+  background: -webkit-linear-gradient(#fff, #ccc);
+  background: -o-linear-gradient(#fff, #ccc);
+  background: linear-gradient(#fff, #ccc);
+  text-shadow: 0 1px 0 #fff;
+}
+
+/* Override animation on modal open */
+.modal:target > div {
+  -webkit-animation-name: bounce;
+  -moz-animation-name: bounce;
+  animation-name: bounce;
+}
+
+.modal h2 {
+  font-size: 24px;
+  padding: 0 0 20px;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale3d(0.1, 0.1, 1);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  }
+  55% {
+    -webkit-transform: scale3d(1.08, 1.08, 1);
+    box-shadow: 0 10px 20px transparent;
+  }
+  75% {
+    -webkit-transform: scale3d(0.95, 0.95, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  }
+}
+@-webkit-keyframes minimise {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(0.1, 0.1, 1);
+  }
+}
+@-moz-keyframes bounce {
+  0% {
+    -moz-transform: scale3d(0.1, 0.1, 1);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  }
+  55% {
+    -moz-transform: scale3d(1.08, 1.08, 1);
+    box-shadow: 0 10px 20px transparent;
+  }
+  75% {
+    -moz-transform: scale3d(0.95, 0.95, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  }
+  100% {
+    -moz-transform: scale3d(1, 1, 1);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  }
+}
+@-moz-keyframes minimise {
+  0% {
+    -moz-transform: scale3d(1, 1, 1);
+  }
+  100% {
+    -moz-transform: scale3d(0.1, 0.1, 1);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale3d(0.1, 0.1, 1);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  }
+  55% {
+    transform: scale3d(1.08, 1.08, 1);
+    box-shadow: 0 10px 20px transparent;
+  }
+  75% {
+    transform: scale3d(0.95, 0.95, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  }
+}
+@keyframes minimise {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    transform: scale3d(0.1, 0.1, 1);
+  }
+}
+/* Modal close link */
+.modal a[href="#close"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: transparent;
+}
+
+/* Reset native styles */
+.modal a[href="#close"]:focus {
+  outline: none;
+}
+
+/* Create close button */
+.modal a[href="#close"]:after {
+  content: 'X';
+  display: block;
+  /* Position */
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 1.5em;
+  padding: 1px 1px 1px 2px;
+  /* Style */
+  text-decoration: none;
+  text-shadow: none;
+  text-align: center;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.modal a[href="#close"]:focus:after,
+.modal a[href="#close"]:hover:after {
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+.modal a[href="#close"]:focus:after {
+  outline: 1px solid #000;
+}
+
+/* Open modal */
+a.openModal {
+  margin: 1em auto;
+  display: block;
+  width: 200px;
+  background: #ccc;
+  text-align: center;
+  padding: 10px;
+  border-radius: 7px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #ddd);
+  background: -webkit-linear-gradient(#fff, #ddd);
+  background: -o-linear-gradient(#fff, #ddd);
+  background: linear-gradient(#fff, #ddd);
+  text-shadow: 0 1px 0 #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+a.openModal:hover,
+a.openModal:focus {
+  background: -moz-linear-gradient(#fff, #ccc);
+  background: -webkit-linear-gradient(#fff, #ccc);
+  background: -o-linear-gradient(#fff, #ccc);
+  background: linear-gradient(#fff, #ccc);
+}
+
+/*
+CSS3 Accordion Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+.accordion {
+  /*background: #eee;*/
+  padding: 0.5em .4em;
+  max-width: 50em;
+  margin: 0 auto;
+  overflow: hidden;
+  order: 2;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.accordion > h3 {
+  padding: .4em 1em;
+  font-size: 1.1em;
+  font-style: bolder;
+  border-top: 2px solid #1f90df;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion .section {
+  border-bottom: 1px solid #ccc;
+  padding: 0 .5em;
+}
+
+.accordion a {
+  display: block;
+  font-weight: normal;
+  padding: .5em 0;
+  text-decoration: none;
+}
+
+.accordion a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.accordion a + div {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.3s ease-in;
+  -ms-transition: height 0.3s ease-in;
+  transition: height 0.3s ease-in;
+}
+
+.accordion div img {
+  max-width: 100px;
+  padding: 0 .4em 0 0;
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.accordion div span {
+  padding: 0 1.2em 0 0;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.accordion a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.accordion a:hover + div {
+  height: auto;
+  max-height: 150px;
+  overflow: auto;
+}
+
+/*
+CSS3 Tab Experiment
+Date: 2015.01.05
+Author: chenzhou
+*/
+.card-wapper {
+  max-width: 65em;
+  margin: 0 auto;
+  position: relative;
+  /*
+    flex: 100% !important;
+    -ms-flex: 100%  !important;
+    */
+}
+
+.card-wapper > h3 {
+  padding: .5em;
+  height: 1.2em;
+  line-height: 1.5em;
+  font-size: 1.1em;
+  color: #999;
+  border-width: 1px 1px 4px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  background-color: #f5f5f5;
+}
+
+.card {
+  max-width: 65em;
+  position: relative;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0 2em;
+}
+
+ol.card .item {
+  float: left;
+  width: 12em;
+  padding: 1em 1em 0;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #dfe7ef;
+  color: #202830;
+  text-shadow: white 0 1px 1px;
+}
+
+ol.card .item .fn {
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  font-size: 1.2em;
+  /*line-height: 1;*/
+  border-bottom: 1px solid #dfe7ef;
+  max-height: 2.1em;
+  overflow: hidden;
+}
+
+ol.card .item ul {
+  height: 11em;
+}
+
+/*css3 transforms */
+.card .item {
+  -webkit-transition-property: scale;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+}
+
+.card .item:hover {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+}
+
+a.action {
+  display: block;
+  margin-bottom: 1.5em;
+  padding: .8em 1.1em;
+  background-color: #fe6423;
+  color: white;
+  text-align: center;
+  text-shadow: rgba(32, 40, 48, 0.8) 0 1px 1px;
+}
+
+ol.card .action {
+  font-size: 1.4em;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  text-shadow: rgba(32, 40, 48, 0.8) 0 1px 1px;
+}
+
+a.action:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9900), to(#e55a20));
+  background-image: -moz-linear-gradient(left top, left bottom, from(#ff9900), to(#e55a20));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+a.action:hover {
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+}
+
+a.basic {
+  background-color: #e5c355;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e5c355), to(#bba047));
+  background-image: -moz-linear-gradient(left top, left bottom, from(#e5c355), to(#bba047));
+}
+
+a.professional {
+  background-color: #bc4848;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bc4848), to(#7e3131));
+  background-image: -moz-linear-gradient(left top, left bottom, from(#bc4848), to(#7e3131));
+}
+
+a.small {
+  background-color: #da6d0e;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9900), to(#be4b1a));
+  background-image: -moz-linear-gradient(left top, left bottom, from(#ff9900), to(#be4b1a));
+}
+
+a.enterprise {
+  background-color: #7a68a6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7a68a6), to(#5b4e7f));
+  background-image: -moz-linear-gradient(left top, left bottom, from(#7a68a6), to(#5b4e7f));
+}
+
+/*
+CSS3 Tab Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+/* RESET CSS */
+/* FORMS CSS */
+/* FORMS CSS */
+/* SCRATCH */
+.card-wapper {
+  max-width: 65em;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card-wapper > h3 {
+  padding: .5em;
+  height: 1.2em;
+  line-height: 1.5em;
+  font-size: 1.1em;
+  color: #999;
+  border-width: 1px 1px 4px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  background-color: #f5f5f5;
+}
+
+.card {
+  max-width: 65em;
+  position: relative;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0 2em;
+}
+
+ol.card .item {
+  float: left;
+  width: 18em;
+  height: 8.5em;
+  margin: .3em;
+  background-color: white;
+  border: 1px solid #dfe7ef;
+  color: #202830;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  zoom: 1;
+}
+
+ol.card .item img {
+  float: left;
+  padding: .5em .4em 0;
+  width: 8em;
+  max-width: 10em;
+}
+
+ol.card .item div {
+  float: right;
+  width: 9em;
+  max-width: 10em;
+  padding: .5em 0 0 0;
+  text-shadow: white 0 1px 1px;
+}
+
+ol.card .item .fn {
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  font-size: 1.2em;
+  text-align: left;
+  border-bottom: 1px solid #dfe7ef;
+  max-height: 2.1em;
+  overflow: hidden;
+}
+
+ol.card .item div span {
+  padding-right: .8em;
+  overflow: hidden;
+}
+
+/*
+CSS3 Tab Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+.imgList-wapper {
+  margin: 0 auto 1em auto;
+  overflow: hidden;
+  /*
+  flex: 100% !important;
+  -ms-flex: 100%  !important;
+  */
+}
+
+.info-pop {
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+
+.info-pop .pop-content {
+  width: 335px;
+  padding: 1em;
+  margin-left: 0.5em;
+  background: #fff;
+  border: 1px solid #999;
+}
+
+.info-pop .meta {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.info-pop .meta .green {
+  color: #fff;
+  background: #66c056;
+}
+
+.info-pop .meta span {
+  float: left;
+  font-size: 13px;
+  padding: 2px 10px 1px;
+  background: #f5f5f5;
+  margin: 0 8px 8px 0;
+  border-radius: 12px;
+  color: #666;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.imgList {
+  position: relative;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0 2em;
+}
+
+ol.imgList .item {
+  float: left;
+  width: 11em;
+  overflow: hidden;
+  margin-bottom: 12px;
+  padding: 1em .5em 0;
+  text-align: center;
+  color: #202830;
+  text-shadow: white 0 1px 1px;
+}
+
+ol.imgList .item img {
+  width: 11em;
+  max-height: 12em;
+  overflow: hidden;
+}
+
+ol.imgList .item .fn {
+  font-size: 14px;
+  height: 1.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* csstransforms */
+.imgList .item a img {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+a.action {
+  display: block;
+  margin-bottom: 1.5em;
+  padding: .6em 1em;
+  background-color: #fe6423;
+  color: white;
+  text-align: center;
+  text-shadow: rgba(32, 40, 48, 0.8) 0 1px 1px;
+}
+
+ol.imgList .action {
+  font-size: 1.2em;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  text-shadow: rgba(32, 40, 48, 0.8) 0 1px 1px;
+}
+
+a.action:hover {
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9900), to(#e55a20));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+a.basic {
+  background-color: #e5c355;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e5c355), to(#bba047));
+}
+
+/*
+CSS3 Tab Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+.tab {
+  max-width: 52em;
+  position: relative;
+  margin: 0.8em auto;
+  order: 2;
+}
+
+.tabNav {
+  margin: 0;
+  padding: 0;
+}
+
+.tabNav span {
+  padding: .5em;
+  font-style: normal;
+  height: 1.5em;
+  line-height: 2em;
+  font-size: 1.1em;
+  color: #999;
+  border-width: 4px 1px 1px;
+  border-style: solid;
+  border-color: #ccc;
+}
+
+.tabNav span a {
+  text-decoration: none;
+}
+
+.tabNav .current {
+  font-weight: bold;
+  border-top-color: #1f90df;
+}
+
+.tabContent > div {
+  position: absolute;
+  left: 0;
+  padding: 0.5em 0 0 0;
+  opacity: 0;
+}
+
+.tabContent .current {
+  background-color: white;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  z-index: 3;
+  opacity: 0.75;
+}
+
+.tabContent .list-item {
+  border-bottom: 1px solid #DDD;
+  padding: 8px 0 10px 0;
+  overflow: hidden;
+}
+
+.tabContent :target {
+  background-color: white;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  opacity: 0.75;
+}
+
+/*
+CSS3 Tab Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+.table-wapper {
+  max-width: 52em;
+  position: relative;
+  margin: 0.5em auto;
+  order: 3;
+}
+
+.table-wapper > h3 {
+  padding: .5em;
+  font-style: bolder;
+  height: 1.2em;
+  line-height: 1.5em;
+  font-size: 1.1em;
+  color: #999;
+  border-top: 2px solid #1f90df;
+  border-bottom: 1px solid #ccc;
+}
+
+.list-box {
+  position: absolute;
+  left: 0;
+  padding: 0 .4em;
+}
+
+.list-box .list-item {
+  border-bottom: 1px solid #DDD;
+  padding: 8px 0 4px 0;
+  overflow: hidden;
+}
+
+.list-box .list-item span {
+  padding-right: .5em;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=experiment-index.css.map */

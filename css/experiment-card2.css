@@ -1,0 +1,85 @@
+/*
+CSS3 Tab Experiment
+Date: 2015.01.05
+Author: Chenzhou
+*/
+@import url(reset.css);
+/* RESET CSS */
+@import url(forms.css);
+/* FORMS CSS */
+@import url(tabs.css);
+/* FORMS CSS */
+@import url(scratch.css);
+/* SCRATCH */
+.card-wapper {
+  max-width: 65em;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card-wapper > h3 {
+  padding: .5em;
+  height: 1.2em;
+  line-height: 1.5em;
+  font-size: 1.1em;
+  color: #999;
+  border-width: 1px 1px 4px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  background-color: #f5f5f5;
+}
+
+.card {
+  max-width: 65em;
+  position: relative;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0 2em;
+}
+
+ol.card .item {
+  float: left;
+  width: 18em;
+  height: 8.5em;
+  margin: .3em;
+  background-color: white;
+  border: 1px solid #dfe7ef;
+  color: #202830;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  zoom: 1;
+}
+
+ol.card .item img {
+  float: left;
+  padding: .5em .4em 0;
+  width: 8em;
+  max-width: 10em;
+}
+
+ol.card .item div {
+  float: right;
+  width: 9em;
+  max-width: 10em;
+  padding: .5em 0 0 0;
+  text-shadow: white 0 1px 1px;
+}
+
+ol.card .item .fn {
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  font-size: 1.2em;
+  text-align: left;
+  border-bottom: 1px solid #dfe7ef;
+  max-height: 2.1em;
+  overflow: hidden;
+}
+
+ol.card .item div span {
+  padding-right: .8em;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=experiment-card2.css.map */

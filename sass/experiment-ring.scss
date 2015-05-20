@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+.experiment-animation{
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  
+  background-image: -webkit-gradient(radial, 50% 500, 1, 50% 500, 400,
+                        from(rgba(255, 255, 255, 0.3)),
+                        to(rgba(255, 255, 255, 0)));
+  background-repeat: no-repeat;
+
+  perspective: 1200;
+  -webkit-perspective: 1200;
+  -ms-perspective: 1200;
+
+  perspective-origin: 50% 225px;
+  -webkit-perspective-origin: 50% 225px;
+  -ms-perspective-origin: 50% 225px;   
+}
+
+.experiment-animation .ring{
+    position: relative;
+    top: 5em;
+    margin: 2em auto;
+    height: 16em;
+    width: 12em;
+
+    transition: transform 2s;
+    -webkit-transition: -webkit-transform 2s;
+
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserv-3d;
+
+    -webkit-animation: spin 32s infinite linear;
+    animation: spin 32s infinite linear;
+    -ms-animation: spin 32s infinite linear;
+}
+
+.experiment-animation .plane{
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid white;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-align: center;
+    font-family: Times, serif;
+    font-size: 124pt;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.6);
+    
+    transition: transform 2s, opacity 2s;
+    -webkit-transition: webkit-transform 2s, opacity 2s;
+    -ms-transition: ms-transform 2s, opacity 2s;
+}
+
+.experiment-animation .backfaces .plane {
+    -webkit-backface-visibility: visible;
+}
+    
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotateY(0); }
+    to   { -webkit-transform: rotateY(-360deg); }
+}
+
+@keyframes spin {
+    from { transform: rotateY(0); }
+    to   { transform: rotateY(-360deg); }
+}

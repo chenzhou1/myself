@@ -1,0 +1,16 @@
+#brickwall {
+  max-width: 70em;
+  margin: 0 auto;
+  background: #ff9;
+  overflow: hidden;
+}
+
+.brick-item {
+  transition: transform .3s;
+}
+
+.brick-item:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=experiment-brickwall.css.map */
