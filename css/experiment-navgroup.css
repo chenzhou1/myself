@@ -315,7 +315,7 @@ Author: Chenzhou
 }
 
 .navpng, .fs_v_play, .videoNewsLeft, .cln_links span, .navgroup-right li, .mod_title, .mod_list li {
-  background-image: url(/images/sports_png8.png);
+  background-image: url(../images/sports_png8.png);
   background-repeat: no-repeat;
 }
 
