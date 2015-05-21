@@ -60,7 +60,7 @@ var imgTplFactory = {
       try{
        	$.ajax({
           type: 'GET', //url: 'IRSPortalHttpHandler.ashx?method=GetInfoList',
-          url: '../data/infoList.json',
+          url: 'data/infoList.json',
           // data to be added to query string:
           //data: { columnId: columnId, infoType: 'list', count: count },
           dataType: 'json',

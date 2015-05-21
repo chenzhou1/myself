@@ -52,7 +52,7 @@ var cardTplFactory = {
       try{
        	$.ajax({
           type: 'GET', //url: 'IRSPortalHttpHandler.ashx?method=GetInfoList',
-          url: '../data/infoList.json',
+          url: 'data/infoList.json',
           //data: { columnId: columnId, infoType: 'list', count: count },
           dataType: 'json',
           timeout: 3000,

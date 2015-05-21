@@ -99,7 +99,7 @@ var navigationTplFactory = {
       try{
       	$.ajax({
           type: 'GET',  //url: 'IRSPortalHttpHandler.ashx?method=GetInfoListForPortal',
-          url: '../data/navgroups.json',
+          url: 'data/navgroups.json',
           //data: { columnSetId: '100002', localtionUINo: '1', infoType: 'list', count: count },
           dataType: 'json',
           timeout: 3000,

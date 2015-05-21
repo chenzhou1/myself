@@ -56,7 +56,7 @@ var accordionTplFactory = {
       try{
       	$.ajax({
           type: 'GET',  //url: 'IRSPortalHttpHandler.ashx?method=GetInfoListForPortal',
-          url: '../data/infoList.json',
+          url: 'data/infoList.json',
           // data to be added to query string:
           //data: { columnSetId: '100002', localtionUINo: '1', infoType: 'list', count: count },
           dataType: 'json',

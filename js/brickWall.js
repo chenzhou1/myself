@@ -71,7 +71,7 @@ var brickWallTplFactory = {
       try{
        	$.ajax({
           type: 'GET', 
-          url: '/data/brickwall.json',  //url: 'IRSPortalHttpHandler.ashx?method=GetInfoList',
+          url: 'data/brickwall.json',  //url: 'IRSPortalHttpHandler.ashx?method=GetInfoList',
           dataType: 'json',
           timeout: 1000,
           context: $('body'),
