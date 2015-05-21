@@ -42,7 +42,7 @@
         $.ajax({
           type: 'GET',
           //url: 'IRSPortalHttpHandler.ashx?method=GetInfoListForPortal',
-          url: '../data/imgList.json',
+          url: 'data/imgList.json',
           // data to be added to query string:
           //data: { columnSetId: '100002', localtionUINo: '1', infoType: 'list', count: count },
           dataType: 'json',

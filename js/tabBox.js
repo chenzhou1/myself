@@ -73,7 +73,7 @@ var tabTplFactory = {
       try{
        	$.ajax({
           type: 'GET', //url: 'IRSPortalHttpHandler.ashx?method=GetGroupData',
-          url: '../data/columnList.json',
+          url: 'data/columnList.json',
           // data to be added to query string:
           //data: { columnSetId: columnSetId, boxType: 'tab' },
           dataType: 'json',
