@@ -1,0 +1,43 @@
+[
+  	{
+  		"InfoId": 1,
+  		"BtnStyle":"basic",
+  		"Title": "深夜食堂是个什么东西，是吃饭的地方吗",
+  		"ImgURL": "images/1.jpg",
+  		"Author": "陈舟",
+  		"Dept": "协同事业部",
+  		"Published": "2015-1-7 13:14",
+  		"Content": "深夜食堂是个什么东西，是吃饭的地方吗, 深夜食堂是个什么东西，是吃饭的地方吗, 是吃饭的地方吗……"  	}, {
+  		"InfoId": 2,
+  		"BtnStyle":"professional",
+  		"Title": "长得好看是怎样一种体验，不知道",
+  		"ImgURL": "images/2.jpg",
+  		"Author": "张无忌",
+  		"Dept": "武当总部",
+  		"Published": "2015-1-5 13:14",
+  		"Content": "长得好看是怎样一种体验，不知道,长得好看是怎样一种体验，不知道……" 	}, {
+  		"InfoId": 3,
+  		"BtnStyle":"enterprise",
+  		"Title": "公司年会什么时候开始，去看看有什么奖品",
+  		"ImgURL": "images/3.jpg",
+  		"Author": "小龙女",
+  		"Dept": "古墓派",
+  		"Published": "2015-1-5 10:14",
+  		"Content": "公司年会什么时候开始，去看看有什么奖品, 公司年会什么时候开始，去看看有什么奖品……"  	}, {
+  		"InfoId": 8,
+  		"BtnStyle":"small",
+  		"Title": "新中国成立以来，有哪些法律专业学生必须或者值得了解的案例",
+  		"ImgURL": "images/8.jpg",
+  		"Author": "欧阳锋",
+  		"Dept": "无党派",
+  		"Published":  "2015-1-5 10:14",
+  		"Content": "新中国成立以来，有哪些法律专业学生必须或者值得了解的案例 去看看有什么奖品"  	}, {
+  		"InfoId": 9,
+  		"BtnStyle":"basic",
+  		"Title": "为什么知乎比豆瓣和人人高大上",
+  		"ImgURL": "images/9.jpg",
+  		"Author": "张伟",
+  		"Dept": "协同事业部",
+  		"Published": "2015-1-5 10:14",
+  		"Content": "为什么知乎比豆瓣和人人高大上 公司年会什么时候开始，去看看有什么奖品……"  	}
+]
