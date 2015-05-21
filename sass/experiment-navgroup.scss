@@ -12,13 +12,13 @@ Author: Chenzhou
 .wrap-navgroup .navgroup-left {position: absolute;left: 0px; top: 0px; height: 10em;overflow: hidden;z-index: 101;}
 .navgroup-left .container { width: 12.5em; height: 10em; position: relative;}
 .navgroup-left .container .aside { display: block; position: relative; z-index: 103;
-  background: url(/app/images/sportTV.jpg) no-repeat left center;
+  background: url(../images/sportTV.jpg) no-repeat left center;
   width: 12.5em; color: #fff;
   height: 11em;}
 .container .aside .head {padding: 1.2em 0 0 0.7em; height: 24px;line-height: 24px; overflow: hidden; font-size: 18px; font-weight: normal;}
 
 .navgroup-left .container .main { position: absolute; left: 12.5em; top: 0px; z-index: 102;
-  background: url(/app/images/sportTV.jpg) no-repeat center;
+  background: url(../images/sportTV.jpg) no-repeat center;
   width: 57em;
   height: 11em;}
 .container .main .slider {width: 57em; overflow: hidden; height: 10em; zoom: 1; position: relative;}
@@ -123,5 +123,5 @@ Author: Chenzhou
 
 
 .navpng, .fs_v_play, .videoNewsLeft, .cln_links span, .navgroup-right li, .mod_title, .mod_list li {
-  background-image: url(/app/images/sports_png8.png);
+  background-image: url(../images/sports_png8.png);
   background-repeat: no-repeat;}

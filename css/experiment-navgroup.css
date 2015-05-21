@@ -35,7 +35,7 @@ Author: Chenzhou
   display: block;
   position: relative;
   z-index: 103;
-  background: url(/images/sportTV.jpg) no-repeat left center;
+  background: url(../images/sportTV.jpg) no-repeat left center;
   width: 12.5em;
   color: #fff;
   height: 11em;
@@ -55,7 +55,7 @@ Author: Chenzhou
   left: 12.5em;
   top: 0px;
   z-index: 102;
-  background: url(/images/sportTV.jpg) no-repeat center;
+  background: url(../images/sportTV.jpg) no-repeat center;
   width: 57em;
   height: 11em;
 }
